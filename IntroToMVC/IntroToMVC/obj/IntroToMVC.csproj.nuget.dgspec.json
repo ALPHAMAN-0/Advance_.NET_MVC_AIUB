@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\siam\\Desktop\\Dotnet\\IntroToMVC\\IntroToMVC\\IntroToMVC.csproj": {}
+    "C:\\Users\\siam\\Desktop\\Github\\Advance_Dot_Net_AIUB\\IntroToMVC\\IntroToMVC\\IntroToMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\siam\\Desktop\\Dotnet\\IntroToMVC\\IntroToMVC\\IntroToMVC.csproj": {
+    "C:\\Users\\siam\\Desktop\\Github\\Advance_Dot_Net_AIUB\\IntroToMVC\\IntroToMVC\\IntroToMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\siam\\Desktop\\Dotnet\\IntroToMVC\\IntroToMVC\\IntroToMVC.csproj",
+        "projectUniqueName": "C:\\Users\\siam\\Desktop\\Github\\Advance_Dot_Net_AIUB\\IntroToMVC\\IntroToMVC\\IntroToMVC.csproj",
         "projectName": "IntroToMVC",
-        "projectPath": "C:\\Users\\siam\\Desktop\\Dotnet\\IntroToMVC\\IntroToMVC\\IntroToMVC.csproj",
+        "projectPath": "C:\\Users\\siam\\Desktop\\Github\\Advance_Dot_Net_AIUB\\IntroToMVC\\IntroToMVC\\IntroToMVC.csproj",
         "packagesPath": "C:\\Users\\siam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\siam\\Desktop\\Dotnet\\IntroToMVC\\IntroToMVC\\obj\\",
+        "outputPath": "C:\\Users\\siam\\Desktop\\Github\\Advance_Dot_Net_AIUB\\IntroToMVC\\IntroToMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
