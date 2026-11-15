@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Employee>
+@{
+    ViewData["Title"] = "Highest Paid in Each Department";
+    int maxExperience = Model.Any() ? Model.Max(e => e.ExperienceYears) : 0;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">No records found</div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Experience</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model)
+            {
+                <tr class="@(e.ExperienceYears == maxExperience ? "table-warning fw-bold" : "")">
+                    <td>@e.Department</td>
+                    <td>@e.EmpName</td>
+                    <td>@e.Salary.ToString("N0")</td>
+                    <td>@e.ExperienceYears years</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p class="text-muted">Highlighted: most experienced among these employees.</p>
+}

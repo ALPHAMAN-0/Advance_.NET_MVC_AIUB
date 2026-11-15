@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model StudentModel
+@{
+    ViewData["Title"] = "Student Details";
+    var nextYear = Model.Age + 1;
+}
+<h2>@Model.Name</h2>
+<p>Age: @Model.Age</p>
+<p>Next year: @nextYear</p>
+<p>Implicit: @Model.Age * 2</p>
+<p>Explicit: @(Model.Age * 2)</p>
+<p>Upper: @Model.Name.ToUpper()</p>
+<p>Email: john@example.com</p>
+<p>Escaped: @@Model.Name</p>
+@if (Model.IsActive)
+{
+    <p>The account is active.</p>
+}
+else
+{
+    <p>Inactive account.</p>
+}
+
+<p>Encoded: @Model.Description</p>
+<p>Raw: @Html.Raw(Model.Description)</p>
+<p>Typo: [@ViewBag.Mesage]</p>
+@section Scripts {
+    <script>console.log("Details page loaded");</script>
+}

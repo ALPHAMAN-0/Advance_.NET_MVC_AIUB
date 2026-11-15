@@ -1,0 +1,57 @@
+@model ClassTask.Models.StudentModel
+
+@{
+    ViewData["Title"] = "Add Student";
+}
+
+<h2>Add Student</h2>
+
+<form asp-action="Create" method="post">
+    <table class="table table-bordered" style="max-width: 700px">
+        <tr>
+            <th><label asp-for="name"></label></th>
+            <td>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <th><label asp-for="email"></label></th>
+            <td>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <th><label asp-for="courseCode"></label></th>
+            <td>
+                <input asp-for="courseCode" class="form-control" />
+                <span asp-validation-for="courseCode" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <th><label asp-for="hour"></label></th>
+            <td>
+                <input asp-for="hour" class="form-control" />
+                <span asp-validation-for="hour" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <th><label asp-for="semesterfee"></label></th>
+            <td>
+                <input asp-for="semesterfee" class="form-control" />
+                <span asp-validation-for="semesterfee" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </td>
+        </tr>
+    </table>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

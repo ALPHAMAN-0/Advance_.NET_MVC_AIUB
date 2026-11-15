@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Employee>
+
+<h2>@ViewData["Title"]</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">No records found</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Experience</th>
+                <th>Joined</th>
+                <th>Salary Label</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model)
+            {
+                <tr>
+                    <td>@e.EmpName</td>
+                    <td>@e.Department</td>
+                    <td>@e.Salary.ToString("N0")</td>
+                    <td>@e.ExperienceYears years</td>
+                    <td>@e.JoinedAt.ToString("dd MMM yyyy")</td>
+                    <td>
+                        @if (e.Salary >= 80000)
+                        {
+                            <span class="badge bg-success">High Earner</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">Standard</span>
+                        }
+                    </td>
+                    <td>
+                        @if (e.ExperienceYears > 5)
+                        {
+                            <span class="badge bg-primary">Senior</span>
+                        }
+                        else if (e.ExperienceYears < 2)
+                        {
+                            <span class="badge bg-warning text-dark">Junior</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
